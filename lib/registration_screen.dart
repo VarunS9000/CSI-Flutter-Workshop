@@ -142,7 +142,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             checkBoxElement('Minimum eight characters', 2),
             
             TextButton(
-              
+              style: ButtonStyle(
+                shape:MaterialStateProperty.all<RoundedRectangleBorder>(
+                  RoundedRectangleBorder(
+                    borderRadius:BorderRadius.circular(10),
+                    side:  const BorderSide()
+                  )
+                )
+              ),
               onPressed: (){
                 Navigator.pushNamed(context, '/congratulations',arguments: {
                   'name':name.text,
